@@ -8,6 +8,7 @@ import { Button } from "./ui/button";
 import Logout from "./Logout";
 
 const Header = ({ session }: { session: Session }) => {
+  console.log(session);
   return (
     <header className="my-10 flex justify-between gap-5 text-white font-bold ">
       <Link href="/" className="flex items-center gap-2">
@@ -20,7 +21,7 @@ const Header = ({ session }: { session: Session }) => {
           <Link href={"/"}>Library</Link>
         </li>
         <li>
-          <Link href={"/profile"}>
+          {/* <Link href={"/profile"}> */}
             <Avatar>
               <AvatarImage
                 src={session?.user?.image || "/images/profilepic.png"}
@@ -30,7 +31,7 @@ const Header = ({ session }: { session: Session }) => {
                 {getInitial(session?.user?.name || "IN")}
               </AvatarFallback>
             </Avatar>
-          </Link>
+          {/* </Link> */}
         </li>
         <li>
           {session?.user ? (

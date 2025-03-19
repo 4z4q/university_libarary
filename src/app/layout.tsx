@@ -34,7 +34,7 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
     <html lang="en">
       <SessionProvider session={session}>
         <body
-          className={` ${ibmPlexSans.className} ${bebasNeue.variable} antialiased bg-pattern min-h-0`}
+          className={` ${ibmPlexSans.className} ${bebasNeue.variable} antialiased  min-h-0`}
         >
           {children}
           <Toaster richColors />

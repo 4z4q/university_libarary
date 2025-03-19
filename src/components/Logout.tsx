@@ -9,6 +9,7 @@ const Logout = () => {
       onClick={async () => {
         await logoutUser();
       }}
+      className="cursor-pointer"
     >
       Logout
     </Button>

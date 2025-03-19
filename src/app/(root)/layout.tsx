@@ -6,7 +6,7 @@ const layout = async ({ children }: { children: React.ReactNode }) => {
   const session = await auth();
   if(!session) redirect("/sign-in");
   return (
-    <main className="root-container text-white">
+    <main className="root-container text-white bg-pattern">
       <div className="mx-auto max-w-7xl">
         <Header session={session} />
         <div className="mt-15 pb-15">{children}</div>
