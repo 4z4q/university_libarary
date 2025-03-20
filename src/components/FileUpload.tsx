@@ -29,8 +29,7 @@ const FileUpload = ({
   placeholder,
   folder,
   variant,
-  onFileChange,
-}: Props) => {
+  onFileChange}: Props) => {
   const ikUpload = useRef(null);
 
   const [file, setFile] = useState<{ filePath: string } | null>(null);

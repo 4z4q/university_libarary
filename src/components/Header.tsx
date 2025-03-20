@@ -8,7 +8,6 @@ import { Button } from "./ui/button";
 import Logout from "./Logout";
 
 const Header = ({ session }: { session: Session }) => {
-  console.log(session);
   return (
     <header className="my-10 flex justify-between gap-5 text-white font-bold ">
       <Link href="/" className="flex items-center gap-2">
@@ -22,15 +21,15 @@ const Header = ({ session }: { session: Session }) => {
         </li>
         <li>
           {/* <Link href={"/profile"}> */}
-            <Avatar>
-              <AvatarImage
-                src={session?.user?.image || "/images/profilepic.png"}
-                alt="avatar"
-              />
-              <AvatarFallback className="bg-amber-100">
-                {getInitial(session?.user?.name || "IN")}
-              </AvatarFallback>
-            </Avatar>
+          <Avatar>
+            <AvatarImage
+              src={session?.user?.image || "/images/profilepic.png"}
+              alt="avatar"
+            />
+            <AvatarFallback className="bg-amber-100">
+              {getInitial(session?.user?.name || "IN")}
+            </AvatarFallback>
+          </Avatar>
           {/* </Link> */}
         </li>
         <li>
